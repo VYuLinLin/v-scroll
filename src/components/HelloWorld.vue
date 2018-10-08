@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <img alt="Vue logo" src="../assets/logo.png" width="80">
+    <h3>A pull-down refresh and pull-up loaded Vue component based on IScroll5.</h3>
     <v-iscroll>
       <ul>
         <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
@@ -42,6 +43,9 @@ export default {
 </script>
 
 <style scoped>
+img {
+  margin-top: 60px;
+}
 ul {
   list-style-type: none;
   padding: 0;
