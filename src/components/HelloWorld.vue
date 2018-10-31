@@ -1,31 +1,33 @@
 <template>
-  <div class="hello">
-    <img alt="Vue logo" src="../assets/logo.png" width="80">
+  <v-iscroll class="v-iscroll" v-model="refresh" @refresh="onRefresh" up>
+    <img src="../assets/logo.png" width="80">
     <h3>A pull-down refresh and pull-up loaded Vue component based on IScroll5.</h3>
-    <v-iscroll>
-      <ul>
-        <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-        <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-        <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-        <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-      </ul>
-    </v-iscroll>
-  </div>
+    <ul>
+      <li><a>vue-router</a></li>
+      <li><a>vuex</a></li>
+      <li><a>vue-devtools</a></li>
+      <li><a>vue-loader</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+      <li><a>awesome-vue</a></li>
+    </ul>
+  </v-iscroll>
 </template>
 
 <script>
@@ -35,15 +37,25 @@ export default {
   components: {
     VIscroll
   },
-  props: {
-    msg: String
+  data() {
+    return { 
+      refresh: true
+    }
+  },
+  methods: {
+    onRefresh() {
+      setTimeout(() => {
+        this.refresh = false
+      }, 2000)
+    }
   }
 }
 </script>
 
-<style scoped>
-img {
-  margin-top: 60px;
+<style lang="scss" scoped>
+.v-iscroll {
+  text-align: center;
+  height: 100vh !important;
 }
 ul {
   list-style-type: none;

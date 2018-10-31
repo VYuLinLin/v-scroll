@@ -118,7 +118,6 @@ export default {
           _this.showIcon = a
           _this.headText = '下拉刷新'
           _this.footText = '上拉加载更多'
-          _this.$store.commit('SET_LOADING_STATE', '1')
         }, timer)
       }
     }
@@ -206,7 +205,6 @@ export default {
         ) {
           that.footText = '正在加载...'
           that.$emit('input', true)
-          that.$store.commit('SET_LOADING_STATE', '0')
           setTimeout(() => {
             that.$emit('getMore')
           }, 1000)
@@ -231,7 +229,6 @@ export default {
           this.showIcon = true
           this.timer = new Date()
           this.headText = '正在加载...'
-          this.$store.commit('SET_LOADING_STATE', '0')
           this.$emit('input', true)
           setTimeout(() => {
             this.$emit('refresh')
@@ -244,7 +241,6 @@ export default {
     maxDelayed() {
       setTimeout(() => {
         this.$emit('input', false)
-        this.$store.commit('SET_LOADING_STATE', '1')
       }, this.maxTimer)
     },
     // 滚动内容到视图区域，外层调用，勿删

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html { 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%; 
+} 
+body { 
+  margin: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  min-height: 100%;
+} 
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section,summary { 
+  display: block; 
+}
